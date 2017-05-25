@@ -1,0 +1,48 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="MyApp_ver8_DB.Status"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Student" Style="{StaticResource PhoneTextNormalStyle}" Foreground="#DE0C0B0B"/>
+            <TextBlock Text="Check status" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="#DE464545" FontSize="50" FontFamily="Verdana" FontWeight="Bold" Width="404.976654052734"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/Logo-TU-blue-3D_2.png" Opacity="0.3"/>
+            </Grid.Background>
+            <TextBox x:Name="txtBox_facNum" HorizontalAlignment="Left" Height="72" Margin="10,100,-10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" Background="#FF6774EE"/>
+            <Button x:Name="btn_checkStatus" Content="Check status" HorizontalAlignment="Left" Margin="65,253,0,0" VerticalAlignment="Top" Height="167" Width="311" FontSize="36" Click="btn_checkStatus_Click" BorderBrush="#DE0348DC" Opacity="0.8" FontFamily="Verdana" FontWeight="Bold" FontStyle="Italic" Foreground="#DE0A0909">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF399ABF" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="txtBlock_facNum" HorizontalAlignment="Left" Margin="28,78,0,0" TextWrapping="Wrap" Text="Enter your faculty number" VerticalAlignment="Top" FontFamily="Verdana" FontWeight="Bold" FontSize="22" Foreground="#DE0C0B0B"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

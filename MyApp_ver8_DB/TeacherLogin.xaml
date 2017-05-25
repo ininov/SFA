@@ -1,0 +1,50 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="MyApp_ver8_DB.TeacherLogin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Teachers" Style="{StaticResource PhoneTextNormalStyle}" Foreground="#DE0C0B0B"/>
+            <TextBlock Text="Login portal" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Verdana" FontSize="50" FontWeight="Bold" Foreground="#DE464545"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/Logo-TU-blue-3D_2.png" Opacity="0.3"/>
+            </Grid.Background>
+            <TextBox x:Name="txtBox_UserName" HorizontalAlignment="Left" Height="72" Margin="0,128,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" Foreground="#DE000000" Background="#FF6774EE"/>
+            <PasswordBox x:Name="txtBox_Password" HorizontalAlignment="Left" Margin="0,274,0,0" VerticalAlignment="Top" Width="456" Background="#FF6774EE"/>
+            <Button Content="Login" HorizontalAlignment="Left" Margin="68,413,0,0" VerticalAlignment="Top" Width="320" Click="Button_Click" FontFamily="Verdana" FontWeight="Bold" BorderBrush="#DE0348DC" Opacity="0.8" Height="132" FontSize="36" Foreground="#DE0A0909" FontStyle="Italic">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF399ABF" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <TextBlock x:Name="txtBlock_UserName" HorizontalAlignment="Left" Margin="10,106,0,0" TextWrapping="Wrap" Text="Enter Username" VerticalAlignment="Top" Width="235" FontFamily="Verdana" FontWeight="Bold" Foreground="#DE0C0B0B"/>
+            <TextBlock x:Name="txtBlock_Password" HorizontalAlignment="Left" Margin="10,252,0,0" TextWrapping="Wrap" Text="Enter Password" VerticalAlignment="Top" FontFamily="Verdana" FontWeight="Bold" Foreground="#DE0C0B0B"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

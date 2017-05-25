@@ -1,0 +1,65 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity" xmlns:ec="clr-namespace:Microsoft.Expression.Interactivity.Core;assembly=Microsoft.Expression.Interactions"
+    x:Class="MyApp_ver8_DB.Student"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <Grid x:Name="LayoutRoot" Background="WhiteSmoke">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <StackPanel.Background>
+                <SolidColorBrush Color="#FFC6E1EE" Opacity="0.3"/>
+            </StackPanel.Background>
+            <TextBlock Text="Student portal" Margin="0,-7,27,0" Style="{StaticResource PhoneTextTitle1Style}" FontFamily="Verdana" FontWeight="Bold" FontSize="50" HorizontalAlignment="Right" Foreground="#DE464545"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+            <Grid.Background>
+                <SolidColorBrush Color="#FFC6E1EE" Opacity="0.3"/>
+            </Grid.Background>
+            <Button x:Name="btn_FillForm" Content="Fill form" HorizontalAlignment="Left" Margin="57,63,0,0" VerticalAlignment="Top" Click="Button_Click" Height="144" Width="353" FontSize="36" Opacity="0.8" BorderBrush="#DE0348DC" FontWeight="Bold" FontStyle="Italic" FontFamily="Verdana" Foreground="#DE0A0909">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#FF399ABF"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button x:Name="btn_CheckStatus" Content="Check status" HorizontalAlignment="Left" Margin="57,213,0,0" VerticalAlignment="Top" Click="Button_Click_1" Height="144" Width="353" FontSize="36" Opacity="0.8" FontWeight="Bold" FontStyle="Italic" FontFamily="Verdana" BorderBrush="#DE0348DC" Foreground="#DE0A0909">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="White" Offset="1"/>
+                        <GradientStop Color="#FF399ABF"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Button Content="Exit" HorizontalAlignment="Left" Margin="57,362,0,0" VerticalAlignment="Top" Click="Button_Click_2" Height="144" Width="353" FontSize="36" FontFamily="Verdana" FontWeight="Bold" FontStyle="Italic" BorderBrush="#DE0348DC" Opacity="0.8" Foreground="#DE0A0909">
+                <Button.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF399ABF" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </Button.Background>
+            </Button>
+            <Image HorizontalAlignment="Left" Height="153" Margin="150,506,0,0" VerticalAlignment="Top" Width="178" Source="/Logo-TU-blue-3D.png"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
